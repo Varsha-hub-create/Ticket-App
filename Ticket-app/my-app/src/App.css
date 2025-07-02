@@ -1,0 +1,152 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background Gradient */
+body {
+  font-family: 'Arial', sans-serif;
+  /* background: linear-gradient(135deg, #00bcd4, #ff4081); */
+  background-image: url(./bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App Container */
+.App {
+  max-width: 450px;
+  width: 100%;
+  background: linear-gradient(135deg, #00bcd4, #ff4081);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform: scale(0.98);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on App */
+.App:hover {
+  transform: scale(1);
+}
+
+/* Heading */
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000; /* Text color set to black */
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Input Fields */
+input, select {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.8rem 0;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  color: #000; /* Text color set to black */
+}
+
+/* Input Focus Style */
+input:focus, select:focus {
+  border-color: #00bcd4;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #ff4081;
+  transform: translateY(-2px);
+}
+
+/* Button Active Effect */
+button:active {
+  transform: translateY(1px);
+}
+
+/* Ticket Section */
+.ticket {
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.ticket-details p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #ff4081;
+}
+
+.ticket-details strong {
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  input, select, button {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.App {
+  animation: fadeIn 1s ease-out;
+}
+
+input, select, button {
+  animation: fadeIn 1.5s ease-out;
+  opacity: 0;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+/* Loading state */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
